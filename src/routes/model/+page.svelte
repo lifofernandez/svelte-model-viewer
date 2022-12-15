@@ -1,0 +1,19 @@
+<svelte:head>
+	<title>Model</title>
+	<meta name="description" content="Model Viewer" />
+	<!-- Import the component -->
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</svelte:head>
+
+<div class="text-column">
+	<!-- Use it like any other HTML element -->
+	<model-viewer
+		alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
+		src="/NeilArmstrong.glb" ar
+		environment-image="moon_1k.hdr"
+		poster="NeilArmstrong.webp"
+		shadow-intensity="1"
+		camera-controls
+		touch-action="pan-y"
+	></model-viewer>
+</div>
