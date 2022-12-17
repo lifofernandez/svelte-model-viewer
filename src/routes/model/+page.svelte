@@ -17,7 +17,26 @@
     hotspot.addEventListener('click', () => annotationClicked(hotspot));
   });
 </script>
+
 <style type="text/css">
+
+  .container{
+        width:100%;
+        height: 600px;
+  }     
+  .model-container{
+        width:100%;
+        height: 600px;
+  }     
+
+  model-viewer{
+    display: block;
+    position: relative;
+    contain: strict;
+    width: 100%;
+    height: 100%;
+  }     
+
   .view-button {
       background: #fff;
       border-radius: 4px;
@@ -36,21 +55,13 @@
       width: max-content;
       height: max-content;
       transform: translate3d(-50%, -50%, 0);
-    }
+  }
 </style>
+
 </svelte:head>
 
-<div class="text-column">
-	<!-- Use it like any other HTML element -->
-	<model-viewer
-		alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
-		src="/NeilArmstrong.glb" ar
-		environment-image="moon_1k.hdr"
-		poster="NeilArmstrong.webp"
-		shadow-intensity="1"
-		camera-controls
-		touch-action="pan-y"
-	></model-viewer>
+<div class="model-container" >
+
 
 <model-viewer
 	id="hotspot-camera-view-demo"
